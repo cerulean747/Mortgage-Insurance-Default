@@ -108,6 +108,8 @@ The above distributions are skewed and the sample variances are not equal, so I 
 
 Based on the p-values, I reject the null hypothesis that the risk metric means and proportions are equal for all risk metrics at the 5% significance level.
 
+<img src="images/Insured_Uninsured_Risk_pvals.png" width="525"/>
+
 ### Credit Worthiness Metrics
 
 **H<sub>0</sub>: Uninsured loans have the same credit worthiness metric values as do insured loans.**<br/>
@@ -119,7 +121,7 @@ Based on the distribution plots, insured loans have lower average FICO scores bu
 
 Based on the p-values, I reject the null hypothesis that the worthiness metric means and proportions are equal for all worthiness metrics at the 5% significance level.
 
-<img src="images/Insured_Uninsured_Risk_pvals.png" width="525"/>
+<img src="images/Insured%20v.%20Uninsured%20Worthiness%20pvals.png" width="525"/>
 
 However, using seven metrics, the probability that we get at least one significant result due to random chance is 1 - (1 - 0.05)<sup>7</sup>
  = 30.2%! This is where the Bonferroni correction comes in.
