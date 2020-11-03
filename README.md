@@ -84,7 +84,7 @@ There are 201,921 uninsured loans (76%), and 64,741 insured loans (24%).
 
 Even though these loans generally don’t default often, insured loans (especially borrower paid ones, which default more than twice the rate of uninsured loans) default much more frequently than uninsured loans.
 
-![alt text](images/Uninsured%20v.%20Insured%20-%20Borrower%20Paid%20v.%20count%20of%20Insured%20-%20Lender%20Paid:%20Loan%20Defaults%20by%20Insurance%20Type%20%0A%20Q1%202015%20-%20Q1%202019.png "Number of Defaults")
+<img src="images/Uninsured v. Insured - Borrower Paid v. Insured - Lender Paid: Loan Defaults by Insurance Type Q1 2015 - Q1 2019.png" <img src="images/Uninsured v. Insured - Borrower Paid v. proportion of Insured - Lender Paid: Loan Defaults by Insurance Type Q1 2015 - Q1 2019.png"
 
 The below correlation matrix shows how our loan metrics of interest relate to one another. We see that the highest correlation is between LTV and mortgage insurance type at 0.59, which makes sense given Fannie Mae's insurance requirement for high LTV ratios. There otherwise does not seem to be especially high correlations amongst these metrics, even across different insurance types (see [Correlation (Uninsured)](images/corr_uninsured.png), [Correlation (Insured-Borrower)](images/corr_insured_borr.png), [Correlation (Insured-Lender)](images/corr_insured_lend.png). This implies that we can test these metrics separately.
 
