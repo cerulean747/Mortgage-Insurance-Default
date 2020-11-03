@@ -88,7 +88,7 @@ Even though these loans generally don’t default often, insured loans (especial
 
 The below correlation matrix shows how our loan metrics of interest relate to one another. We see that the highest correlation is between LTV and mortgage insurance type at 0.59, which makes sense given Fannie Mae's insurance requirement for high LTV ratios. There otherwise does not seem to be especially high correlations amongst these metrics, even across different insurance types (see [Correlation (Uninsured)](images/corr_uninsured.png), [Correlation (Insured-Borrower)](images/corr_insured_borr.png), [Correlation (Insured-Lender)](images/corr_insured_lend.png). This implies that we can test these metrics separately.
 
-<img src="images/loan_metric_corr.png" width="525"/>
+![alt text](images/loan_metric_corr.png)
 
 ## Hypothesis Tests: Insured vs. Uninsured Loans
 
