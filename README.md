@@ -1,4 +1,4 @@
-# Analysis of Mortgage Insurance and Fannie Mae MBS Loan Defaults and Other Metrics: Q1 2015 - Q1 2019
+# Analysis of Mortgage Insurance, Fannie Mae MBS Loan Defaults, and Other Metrics: Q1 2015 - Q1 2019
 
 ### Table of Contents  
 [Description](#description)  
