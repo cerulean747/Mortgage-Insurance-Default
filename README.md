@@ -74,23 +74,23 @@ Risk metrics measure how risky borrowers are: for instance, if borrowers default
 
 The below table contains some summary statistics for the loans in my dataset.
 
-<img src="images/loan_sumstats.png" width="525"/>
+<img src="imgs/loan_sumstats.png" width="525"/>
 
 Additionally, 1.0 % of these loans default in the Q1 2015 – Q1 2019 period, 14.0 % are first-time-home purchases, and 86.8 % are primary residences. The takeaway is that these are relatively high-quality loans, with high average FICO scores and very few defaults in the Q1 2015 - Q1 2019 period. Any significant differences in loan metrics would be especially interesting. 
 
 There are 201,921 uninsured loans (76%), and 64,741 insured loans (24%).
 
-![alt text](images/Uninsured%20v.%20Insured%20-%20Borrower%20Paid%20v.%20count%20of%20Insured%20-%20Lender%20Paid:%20Loans%20by%20Insurance%20Type%20%0A%20Q1%202015%20-%20Q1%202019.png "Number of Loans")
+![alt text](imgs/Uninsured%20v.%20Insured%20-%20Borrower%20Paid%20v.%20count%20of%20Insured%20-%20Lender%20Paid:%20Loans%20by%20Insurance%20Type%20%0A%20Q1%202015%20-%20Q1%202019.png "Number of Loans")
 
 Even though these loans generally don’t default often, insured loans (especially borrower paid ones, which default more than twice the rate of uninsured loans) default much more frequently than uninsured loans.
 
-![alt text](images/Uninsured%20v.%20Insured%20-%20Borrower%20Paid%20v.%20Insured%20-%20Lender%20Paid:%20Loan%20Defaults%20by%20Insurance%20Type%20%0A%20Q1%202015%20-%20Q1%202019.png) 
+![alt text](imgs/Uninsured%20v.%20Insured%20-%20Borrower%20Paid%20v.%20Insured%20-%20Lender%20Paid:%20Loan%20Defaults%20by%20Insurance%20Type%20%0A%20Q1%202015%20-%20Q1%202019.png) 
 
-![alt text](images/Uninsured%20v.%20Insured%20-%20Borrower%20Paid%20v.%20proportion%20of%20Insured%20-%20Lender%20Paid:%20Loan%20Defaults%20by%20Insurance%20Type%20%0A%20Q1%202015%20-%20Q1%202019.png)
+![alt text](imgs/Uninsured%20v.%20Insured%20-%20Borrower%20Paid%20v.%20proportion%20of%20Insured%20-%20Lender%20Paid:%20Loan%20Defaults%20by%20Insurance%20Type%20%0A%20Q1%202015%20-%20Q1%202019.png)
 
-The below correlation matrix shows how our loan metrics of interest relate to one another. We see that the highest correlation is between LTV and mortgage insurance type at 0.59, which makes sense given Fannie Mae's insurance requirement for high LTV ratios. There otherwise does not seem to be especially high correlations amongst these metrics, even across different insurance types (see [Correlation (Uninsured)](images/corr_uninsured.png), [Correlation (Insured-Borrower)](images/corr_insured_borr.png), [Correlation (Insured-Lender)](images/corr_insured_lend.png). This implies that we can test these metrics separately.
+The below correlation matrix shows how our loan metrics of interest relate to one another. We see that the highest correlation is between LTV and mortgage insurance type at 0.59, which makes sense given Fannie Mae's insurance requirement for high LTV ratios. There otherwise does not seem to be especially high correlations amongst these metrics, even across different insurance types (see [Correlation (Uninsured)](imgs/corr_uninsured.png), [Correlation (Insured-Borrower)](imgs/corr_insured_borr.png), [Correlation (Insured-Lender)](imgs/corr_insured_lend.png). This implies that we can test these metrics separately.
 
-![alt text](images/loan_metric_corr.png)
+![alt text](imgs/loan_metric_corr.png)
 
 ## Hypothesis Tests: Insured vs. Uninsured Loans
 
@@ -101,14 +101,14 @@ The below correlation matrix shows how our loan metrics of interest relate to on
 
 Based on the distribution plots, insured loans have higher risk metric means and proportions than uninsured loans. For defaults specifically, even though very few loans default in the first place, the default rate for insured loans is more than double that of uninsured loans. Insured loans also have higher DTI, LTV, unpaid principal balances, and proportion of first-time home purchases.
 
-<img src="images/Uninsured%20v.%20Insured:%20Loan%20Defaults.png" width="425"/>   <img src="images/Insured%20v.%20Uninsured_LTV.png" width="425"/> 
-<img src="images/Insured%20v.%20Uninsured_DTI.png" width="425"/>   <img src="images/Insured%20v.%20Uninsured_UPB.png" width="425"/>
-<img src="images/Uninsured%20v.%20Insured:%20First-Time%20Home%20Buyers.png" width="425"/>                                                                                                                                   
+<img src="imgs/Uninsured%20v.%20Insured:%20Loan%20Defaults.png" width="425"/>   <img src="imgs/Insured%20v.%20Uninsured_LTV.png" width="425"/> 
+<img src="imgs/Insured%20v.%20Uninsured_DTI.png" width="425"/>   <img src="imgs/Insured%20v.%20Uninsured_UPB.png" width="425"/>
+<img src="imgs/Uninsured%20v.%20Insured:%20First-Time%20Home%20Buyers.png" width="425"/>                                                                                                                                   
 The above distributions are skewed and the sample variances are not equal, so I used both a Welch's t-test and a Mann-Whitney U test for robustness, using an alpha of 0.05.
 
 Based on the p-values, I reject the null hypothesis that the risk metric means and proportions are equal for all risk metrics at the 5% significance level.
 
-<img src="images/Insured_Uninsured_Risk_pvals.png" width="525"/>
+<img src="imgs/Insured_Uninsured_Risk_pvals.png" width="525"/>
 
 ### Credit Worthiness Metrics
 
@@ -117,16 +117,16 @@ Based on the p-values, I reject the null hypothesis that the risk metric means a
 
 Based on the distribution plots, insured loans have lower average FICO scores but interestingly also a higher proportion of primary residences compared to uninsured loans.
 
-<img src="images/Insured%20v.%20Uninsured_FICO.png" width="425"/>   <img src="images/Uninsured%20v.%20Insured:%20First-Time%20Home%20Buyers.png" width="425"/> 
+<img src="imgs/Insured%20v.%20Uninsured_FICO.png" width="425"/>   <img src="imgs/Uninsured%20v.%20Insured:%20First-Time%20Home%20Buyers.png" width="425"/> 
 
 Based on the p-values, I reject the null hypothesis that the worthiness metric means and proportions are equal for all worthiness metrics at the 5% significance level.
 
-<img src="images/Insured%20v.%20Uninsured%20Worthiness%20pvals.png" width="525"/>
+<img src="imgs/Insured%20v.%20Uninsured%20Worthiness%20pvals.png" width="525"/>
 
 However, using seven metrics, the probability that we get at least one significant result due to random chance is 1 - (1 - 0.05)<sup>7</sup>
  = 30.2%! This is where the Bonferroni correction comes in.
 
-<img src="images/Uninsured%20v.%20Insured%20pvals%20Bonf.png" width="525"/>
+<img src="imgs/Uninsured%20v.%20Insured%20pvals%20Bonf.png" width="525"/>
 
 Although the adjusted p-values are slightly larger, we still reject the null hypothesis for all metrics.
 
@@ -145,13 +145,13 @@ For insured vs. uninsured loans, we see significant differences in all metrics, 
 
 Based on the distribution plots, insured loans where borrowers pay premiums generally have higher risk metric means and proportions than do insured loans where lenders pay premiums. Insured (borrower-paid) loans have higher defaults (1.83% vs. 1.01%), higher LTV, and a higher proportion of first-time home purchases. However, they also have slightly lower DTI's and original unpaid balances.   
 
-<img src="images/Insured(Borrower)%20v.%20Insured(Lender:%20Loan%20Defaults.png" width="425"/>   <img src="images/Insured(Borrower)%20v.%20Insured(Lender)_LTV.png" width="425"/> 
-<img src="images/Insured(Borrower)%20v.%20Insured(Lender)_DTI.png" width="425"/>   <img src="images/Insured(Borrower)%20v.%20Insured(Lender)_UPB.png" width="425"/>
-<img src="images/Insured(Borrower)%20v.%20Insured(Lender):%20First-Time%20Home%20Buyers.png" width="425"/>   
+<img src="imgs/Insured(Borrower)%20v.%20Insured(Lender:%20Loan%20Defaults.png" width="425"/>   <img src="imgs/Insured(Borrower)%20v.%20Insured(Lender)_LTV.png" width="425"/> 
+<img src="imgs/Insured(Borrower)%20v.%20Insured(Lender)_DTI.png" width="425"/>   <img src="imgs/Insured(Borrower)%20v.%20Insured(Lender)_UPB.png" width="425"/>
+<img src="imgs/Insured(Borrower)%20v.%20Insured(Lender):%20First-Time%20Home%20Buyers.png" width="425"/>   
 
 Again I use both a Welch's t-test and a Mann-Whitney U test for my hypothesis tests.
 
-<img src="images/Ins%20borr%20v.%20Ins%20lend%20Risk%20pvals.png" width="525"/>
+<img src="imgs/Ins%20borr%20v.%20Ins%20lend%20Risk%20pvals.png" width="525"/>
 
 Based on the p-values, I reject the null hypothesis that the risk metric means and proportions are equal for all risk metrics.
 
@@ -162,15 +162,15 @@ Based on the p-values, I reject the null hypothesis that the risk metric means a
 
 The plots show that insured loans where borrowers pay premiums have lower average FICO scores and proportion of primary residences compared to insured loans where lenders pay premiums.
 
-<img src="images/Insured(Borrower)%20v.%20Insured(Lender)_FICO.png" width="425"/>   <img src="images/Insured(Borrower)%20v.%20Insured(Lender):%20Primary%20Residence%20Properties.png" width="425"/>
+<img src="imgs/Insured(Borrower)%20v.%20Insured(Lender)_FICO.png" width="425"/>   <img src="imgs/Insured(Borrower)%20v.%20Insured(Lender):%20Primary%20Residence%20Properties.png" width="425"/>
 
 Based on the p-values, I reject the null hypothesis that the worthiness metric means and proportions are equal for all worthiness metrics.
 
-<img src="images/Ins%20borr%20v.%20Ins%20lend%20Worthiness%20pvals.png" width="525"/>
+<img src="imgs/Ins%20borr%20v.%20Ins%20lend%20Worthiness%20pvals.png" width="525"/>
 
 After applying the Bonferroni correction, I still the reject the null hypothesis for all metrics.
 
-<img src="images/Ins%20borr%20v.%20Ins%20lend%20pvals%20Bonf.png" width="525"/>
+<img src="imgs/Ins%20borr%20v.%20Ins%20lend%20pvals%20Bonf.png" width="525"/>
 
 
 ## Summary: Borrower Paid vs. Lender Paid Insured Loans
